@@ -5,4 +5,6 @@ empty class rectangle
 
 
 class Rectangle:
+    """To do for rectangle"""
+
     pass
