@@ -1,0 +1,86 @@
+The ``function adding two number a and b``
+======================
+
+Using ``add_integer``
+-------------------
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+
+>>> add_integer(1, 2)
+3
+
+>>> add_integer(-5, 5)
+0
+
+Testing float
+
+>>> add_integer(3.7, 2.3)
+5
+
+>>> add_integer(0.5, 0.5)
+0
+
+>>> add_integer(-0.5, -0.5)
+0
+
+>>> add_integer(10)
+108
+
+>>> add_integer(-5)
+93
+
+>>> add_integer(0)
+98
+
+>>> add_integer(9223372036854775807, 1)
+9223372036854775808
+
+>>> add_integer(9223372036854775807, 0)
+9223372036854775807
+
+>>> add_integer(3, [1, 2, 3])
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+>>> add_integer([], 7)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+>>> add_integer(None, None)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+>>> add_integer({}, [])
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+>>> add_integer(-1, [11])
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+>>> add_integer("hello", "hello")
+Traceback (most recent call last):
+    ...
+ValueError: invalid literal for int() with base 10: 'hello'
+
+>>> add_integer(3, [])
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+>>> add_integer(1, 2, 3)
+Traceback (most recent call last):
+    ...
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+>>> add_integer()
+Traceback (most recent call last):
+    ...
+TypeError: add_integer() missing 1 required positional argument: 'a'
