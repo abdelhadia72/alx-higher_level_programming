@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+"""
+A custom integer class that overrides
+the equality and inequality operators.
+"""
+
 
 class MyInt(int):
     """
