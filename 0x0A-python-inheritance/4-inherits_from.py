@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """
-This module contains a function for determining if an object inherits from a given class.
+This module contains a function for determining
+if an object inherits from a given class.
 """
 
 
