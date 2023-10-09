@@ -19,7 +19,7 @@ def add_attribute(obj, name, value):
         is empty or if the attribute cannot be set.
     """
 
-    if not hasattr(obj, name) and not hasattr(obj, "dict"):
-        setattr(obj, name, value)
+    if not hasattr(obj, name) and isinstance(obj, dict):
+        obj.name = value
     else:
         raise TypeError("can't add new attribute")
