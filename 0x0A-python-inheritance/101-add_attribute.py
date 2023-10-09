@@ -21,5 +21,7 @@ def add_attribute(obj, name, value):
 
     if not hasattr(obj, name):
         setattr(obj, name, value)
+        if hasattr(obj, name):
+            raise TypeError("can't add new attribute")
     else:
         raise TypeError("can't add new attribute")
