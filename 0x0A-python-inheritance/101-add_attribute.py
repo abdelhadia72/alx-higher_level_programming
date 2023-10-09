@@ -15,7 +15,8 @@ def add_attribute(obj, name, value):
         value: The value of the attribute.
 
     Raises:
-        TypeError: If the attribute name is empty or if the attribute cannot be set.
+        TypeError: If the attribute name
+        is empty or if the attribute cannot be set.
     """
 
     if not hasattr(obj, name):
