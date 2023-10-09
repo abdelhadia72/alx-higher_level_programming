@@ -1,0 +1,16 @@
+print_sorted
+======================
+
+Using ``print_sorted``
+-------------------
+
+print_sorted it's a function that print a list sorted:
+
+    >>> MyList = __import__("1-my_list").MyList
+
+    >>> my_list = MyList()
+
+
+Now use it:
+
+   MY code be here
