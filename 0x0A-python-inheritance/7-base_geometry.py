@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+"""
+This file contains the BaseGeometry class.
+"""
+
 
 class BaseGeometry:
     """
