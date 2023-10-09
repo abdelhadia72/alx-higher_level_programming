@@ -1,5 +1,5 @@
+#!usr/bin/python3
 """
-4-inherits_from.py
 
 This module defines a function inherits_from that
 checks if an object is an instance of a class
