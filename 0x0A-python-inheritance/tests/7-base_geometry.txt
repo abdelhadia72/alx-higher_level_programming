@@ -1,41 +1,78 @@
 integer_validator
 ======================
-
 Using ``integer_validator``
 -------------------
+integer_validator is a function that validates values:
 
-integer_validator ist a function that validates values:
-
-    >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
-    
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
     >>> bg = BaseGeometry()
 
+Check when value is not an int
 
-Now use it:
+    >>> bg.integer_validator("Silvia", "hi")
+    Traceback (most recent call last):
+        ...
+    TypeError: Silvia must be an integer
+    
+    >>> bg.integer_validator("", True)
+    Traceback (most recent call last):
+        ...
+    TypeError:  must be an integer
+    
+    >>> bg.integer_validator("str", None)
+    Traceback (most recent call last):
+        ...
+    TypeError: str must be an integer
 
-    >>> bg.integer_validator("name", "it'sme")
-    Traceback (most recent call last):
-        ...
-    TypeError: name must be an integer
-    
-    >>> bg.integer_validator("name", [1,2,3])
-    Traceback (most recent call last):
-        ...
-    TypeError: name must be an integer
-    
-    
-    >>> bg.integer_validator("name", {"value": 14})
-    Traceback (most recent call last):
-        ...
-    TypeError: name must be an integer
-    
+Check when value is less than or equal to zero
 
-    >>> bg.integer_validator("height", -10)
-    Traceback (most recent call last):
-    ...
-    ValueError: height must be greater than 0
-    
-    >>> bg.integer_validator("name", True)
+    >>> bg.integer_validator("Silvia", -9)
     Traceback (most recent call last):
         ...
-    TypeError: name must be an integer
+    ValueError: Silvia must be greater than 0
+    
+    >>> bg.integer_validator("int", 0)
+    Traceback (most recent call last):
+        ...
+    ValueError: int must be greater than 0
+    
+    >>> bg.integer_validator("int", [1, 2, 3])
+    Traceback (most recent call last):
+        ...
+    TypeError: int must be an integer
+    
+    >>> bg.integer_validator("int", (1, 2))
+    Traceback (most recent call last):
+        ...
+    TypeError: int must be an integer
+    
+    >>> bg.integer_validator("int", {2, 4})
+    Traceback (most recent call last):
+        ...
+    TypeError: int must be an integer
+
+Check when value is too large (inf)
+
+    >>> bg.integer_validator("Silvia", float("inf"))
+    Traceback (most recent call last):
+        ...
+    TypeError: Silvia must be an integer
+
+Check when no argument is passed
+
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Check when one argument is passed
+
+    >>> bg.integer_validator("Silvia")
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+    
+    >>> bg.integer_validator(9)
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
