@@ -4,6 +4,7 @@
 
 import json
 import csv
+import turtle
 
 
 class Base:
@@ -144,8 +145,7 @@ class Base:
             writer = csv.writer(file)
             for obj in list_objs:
                 if cls.__name__ == "Rectangle":
-                    writer.writerow(
-                            [obj.id, obj.width, obj.height, obj.x, obj.y])
+                    writer.writerow([obj.id, obj.width, obj.height, obj.x, obj.y])
                 elif cls.__name__ == "Square":
                     writer.writerow([obj.id, obj.size, obj.x, obj.y])
 
@@ -186,35 +186,29 @@ class Base:
         Returns:
             None
         """
-        turt = turtle.Turtle()
-        turt.screen.bgcolor("#b7312c")
-        turt.pensize(3)
-        turt.shape("turtle")
+        my_turtle = turtle.Turtle()
+        my_turtle.screen.bgcolor("#1e1e1e")
+        my_turtle.pensize(3)
+        my_turtle.shape("turtle")
 
-        turt.color("#ffffff")
+        def draw_shape(shape):
+            my_turtle.showturtle()
+            my_turtle.up()
+            my_turtle.goto(shape.x, shape.y)
+            my_turtle.down()
+            for i in range(2):
+                my_turtle.forward(shape.width)
+                my_turtle.left(90)
+                my_turtle.forward(shape.height)
+                my_turtle.left(90)
+            my_turtle.hideturtle()
+
+        my_turtle.color("#cccccc")
         for rect in list_rectangles:
-            turt.showturtle()
-            turt.up()
-            turt.goto(rect.x, rect.y)
-            turt.down()
-            for i in range(2):
-                turt.forward(rect.width)
-                turt.left(90)
-                turt.forward(rect.height)
-                turt.left(90)
-            turt.hideturtle()
+            draw_shape(rect)
 
-        turt.color("#b5e3d8")
+        my_turtle.color("#cccccc")
         for sq in list_squares:
-            turt.showturtle()
-            turt.up()
-            turt.goto(sq.x, sq.y)
-            turt.down()
-            for i in range(2):
-                turt.forward(sq.width)
-                turt.left(90)
-                turt.forward(sq.height)
-                turt.left(90)
-            turt.hideturtle()
+            draw_shape(sq)
 
         turtle.exitonclick()
