@@ -13,7 +13,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """Return a string representation of the square."""
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+        return "[Square] ({}) {}/{} - {}"\
+    .format(self.id, self.x, self.y, self.width)
 
     @property
     def size(self):
