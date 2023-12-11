@@ -1,12 +1,16 @@
 #!/usr/bin/node
 
-if (process.argv.length <= 3) {
-  console.log('0');
-} else {
-  const args = [];
-  for (let i = 2; i < process.argv.length; i++) {
-    args.push(process.argv[i]);
+const number = process.argv[2];
+
+function factorial(num) {
+  if (isNaN(num)) {
+    return 1;
+  } else if (num === 0) {
+    return 1;
+  } else {
+    return num * factorial(num - 1);
   }
-  args.sort()
-  console.log(args[args.length - 2]);
 }
+
+const result = factorial(number);
+console.log(result);
