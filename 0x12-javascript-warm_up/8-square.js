@@ -5,6 +5,6 @@ if (process.argv[2] === undefined) {
   console.log('Missing size');
 } else {
   for (let i = 0; i < numOfLoops; i++) {
-    console.log(('X').repeat(numOfLoops));
+    console.log(('x').repeat(numOfLoops));
   }
 }
