@@ -7,6 +7,6 @@ if (process.argv.length <= 3) {
   for (let i = 2; i < process.argv.length; i++) {
     args.push(process.argv[i]);
   }
-  args.sort();
+  args.sort()
   console.log(args[args.length - 2]);
 }
