@@ -1,11 +1,7 @@
 #!/usr/bin/node
 
-module.exports = class Square extends require('./4-rectangle') {
-  constructor (size) {
-    super(size, size);
-  }
-
-  charPrint (char) {
+module.exports = class Square extends require('./5-square') {
+  charPrint(char) {
     if (char === undefined) {
       this.print();
     } else {
