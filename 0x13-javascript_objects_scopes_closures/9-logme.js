@@ -2,5 +2,5 @@
 
 let gvar = 0;
 exports.logMe = function (item) {
-  console.log(`${gvar++} : ${item}`);
+  console.log(`${gvar++}: ${item}`);
 };
