@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-let gvar = 0;
+let counter = 0;
 exports.logMe = function (item) {
-  console.log(`${gvar++}: ${item}`);
+  console.log(`${counter++}: ${item}`);
 };
