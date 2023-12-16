@@ -38,3 +38,5 @@ if __name__ == "__main__":
     session = Session()
 
     s1 = State('Louisiana')
+    session.add(s1)
+    session.commit()
