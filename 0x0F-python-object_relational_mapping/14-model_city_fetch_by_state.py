@@ -2,10 +2,10 @@
 """
 Script that prints all City objects from the database
 """
-from model_city import City
-from model_state import Base, State
+from model_city import City, Base
+from model_state import State
 from sqlalchemy import create_engine, Column, Integer, String
-from sqlalchemy.orm import declarative_base, sessionmaker
+from sqlalchemy.orm import sessionmaker
 
 from sys import argv
 
