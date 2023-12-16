@@ -19,6 +19,7 @@ class State(Base):
     def __repr__(self):
         return f"{self.id}: {self.name}"
 
+
 if __name__ == "__main__":
     from sqlalchemy import create_engine
     import sys
@@ -26,7 +27,7 @@ if __name__ == "__main__":
     ps = sys.argv[2]
     db = sys.argv[3]
     p = 3306
-    
+
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
         sys.argv[1],
         sys.argv[2],
