@@ -1,6 +1,11 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
 from model_state import Base
 
+"""
+    City class inherits from Base and defines 
+    id and name and state_id
+"""
+
 class City(Base):
     """
     City class that inherits from Base
