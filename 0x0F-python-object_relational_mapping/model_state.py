@@ -18,6 +18,7 @@ class State(Base):
     def __repr__(self):
         return f"{self.id}: {self.name}"
 
+
 if __name__ == "__main__":
     from sqlalchemy import create_engine
     import sys
