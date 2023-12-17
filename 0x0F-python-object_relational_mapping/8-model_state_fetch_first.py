@@ -41,3 +41,5 @@ if __name__ == "__main__":
     data = session.query(State).order_by(State.id).limit(1).first()
     if data is not None:
         print(data)
+    else:
+        print("Nothing")
