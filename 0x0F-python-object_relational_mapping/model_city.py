@@ -1,17 +1,19 @@
 #!/usr/bin/python3
-from sqlalchemy.orm import declarative_base
+"""
+    Class definition of City
+"""
 from sqlalchemy import Column, Integer, String, ForeignKey
-Base = declarative_base()
+from sqlalchemy.orm import declarative_base
 
-"""
-    City class inherits from Base and defines
-    id and name and state_id
-"""
+Base = declarative_base()
 
 
 class City(Base):
-    """Module of a city"""
+    """City class inherits from Base"""
     __tablename__ = 'cities'
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
     name = Column(String(128), nullable=False)
-    state_id = Column(Integer, ForeignKey('states.id'))
+    state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
+
+    def __repr__(self):
+        return f"({self.id}) {self.name}"
