@@ -5,19 +5,10 @@ of a State and an instance Base = declarative_base()
 """
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import declarative_base, sessionmaker
-
+from model_state import State
 
 Base = declarative_base()
 
-
-class State(Base):
-    """State class inherits from Base"""
-    __tablename__ = 'states'
-    id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
-    name = Column(String(128), nullable=False)
-
-    def __repr__(self):
-        return f"{self.id}: {self.name}"
 
 if __name__ == "__main__":
     from sqlalchemy import create_engine
