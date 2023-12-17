@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-from sqlalchemy.orm import declarative_base
-from sqlalchemy import Column, Integer, String, ForeignKey
-Base = declarative_base()
 
 """
     City class inherits from Base and defines
     id and name and state_id
 """
 
+from sqlalchemy.orm import declarative_base
+from sqlalchemy import Column, Integer, String, ForeignKey
+Base = declarative_base()
 
 class City(Base):
     """Module of a city"""
