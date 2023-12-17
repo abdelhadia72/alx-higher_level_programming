@@ -1,16 +1,17 @@
+#!/usr/bin/python3
+from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, ForeignKey
-from model_state import Base
+Base = declarative_base()
 
 """
-    City class inherits from Base and defines 
+    City class inherits from Base and defines
     id and name and state_id
 """
 
+
 class City(Base):
-    """
-    City class that inherits from Base
-    """
-    __tablename__ = "cities"
-    id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
+    """Module of a city"""
+    __tablename__ = 'cities'
+    id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
-    state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
+    state_id = Column(Integer, ForeignKey('states.id'))
