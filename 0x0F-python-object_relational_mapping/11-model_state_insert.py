@@ -24,6 +24,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    session.add(State(name='dell'))
+    toAdd = State(name='Louisiana')
+    session.add(toAdd)
     session.commit()
+    print(toAdd.id)
     session.close()
