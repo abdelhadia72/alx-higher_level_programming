@@ -1,3 +1,7 @@
+#!/bin/python3
+""" find peak in a list """
+
+
 def find_peak(new_list):
     lst = new_list
     if lst == []:
