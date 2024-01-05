@@ -1,3 +1,3 @@
 #!/bin/bash
-# Get length of body of a request
-curl -sX DELETE "$1"
+# Send DELETE request and display response body
+curl -sLX DELETE "$1" | cat
