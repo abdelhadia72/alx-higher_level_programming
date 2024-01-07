@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-    Fetch data from alx intranet
-"""
+"""Fetch data from alx intranet"""
 import urllib.request
 
 
