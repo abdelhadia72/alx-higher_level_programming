@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-Script that fetches https://intranet.hbtn.io/status
+Script that fetches https://alx-intranet.hbtn.io/status
 """
 import requests
 
 if __name__ == '__main__':
-    url = "https://intranet.hbtn.io/status"
+    url = "https://alx-intranet.hbtn.io/status"
     r = requests.get(url)
     text = r.text
     print("Body response:")
