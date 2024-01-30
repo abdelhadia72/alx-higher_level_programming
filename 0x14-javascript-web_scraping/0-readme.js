@@ -1,13 +1,13 @@
+#!/usr/bin/node
+/*
+ * print out the conant
+ * of the file in the argment
+ * the first argment
+ */
+
 const fs = require('fs');
 
-if (process.argv.length < 3) {
-  console.error('Usage: node script.js <file-path>');
-  process.exit(1);
-}
-
-const filePath = process.argv[2];
-
-fs.readFile(filePath, 'utf8', (err, data) => {
+fs.readFile(process.argv[2], 'utf8', (err, data) => {
   if (err) {
     console.error(err);
     return;
