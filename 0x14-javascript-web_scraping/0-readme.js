@@ -13,5 +13,5 @@ fs.readFile(process.argv[2], 'utf8', (err, data) => {
     return;
   }
 
-  console.log('File content:', data);
+  console.log(data);
 });
