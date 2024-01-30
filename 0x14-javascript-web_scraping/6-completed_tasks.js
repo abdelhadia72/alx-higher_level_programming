@@ -6,7 +6,7 @@
 const request = require('request');
 
 if (process.argv.length < 3) {
-  console.error(`Usage: ./${process.argv[1]} <URL> <FILE_PATH>`);
+  console.error(`Usage: ./${process.argv[1]} <URL>`);
   process.exit(1);
 }
 
