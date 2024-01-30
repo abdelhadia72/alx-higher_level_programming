@@ -12,6 +12,11 @@ if (process.argv.length < 3) {
 
 const url = process.argv[2];
 
-request(url, (response) => {
+request(url, (error, response) => {
+  if (error) {
+    console.error('Error:', error.message);
+    process.exit(1);
+  }
   console.log(response.statusCode);
 });
+
