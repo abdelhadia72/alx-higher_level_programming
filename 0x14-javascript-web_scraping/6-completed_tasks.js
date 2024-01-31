@@ -12,7 +12,7 @@ if (process.argv.length < 3) {
 
 const url = process.argv[2];
 
-request.get(url, (err, res) => {
+request.get({ url, encoding: 'utf8' }, (err, res) => {
   if (err) {
     console.error('Error:', err.message);
   }
