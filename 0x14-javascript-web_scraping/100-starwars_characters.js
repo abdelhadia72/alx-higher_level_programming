@@ -23,13 +23,17 @@ request.get(movieUrl, (err, res) => {
     return id;
   });
 
+  console.log("start");
   ids.forEach((id) => {
     const charactersId = `${base}people/${id}`;
     request.get(charactersId, (err, res) => {
       if (err) {
         console.error('Error:', err.message);
       }
-      console.log(JSON.parse(res.body).name);
+      // console.log(JSON.parse(res.body).name);
+      console.log("fetching");
     });
+    console.log("me");
   });
+  console.log("end");
 });
